@@ -1,1 +1,6 @@
 .vs/
+moc/
+*.obj
+*.pdb
+*.log
+*.tlog/
