@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VizTrader", "VizTrader\VizTrader.vcxproj", "{474D88B3-6BF1-4BE7-B2F5-806F0B0AD0B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{474D88B3-6BF1-4BE7-B2F5-806F0B0AD0B5}.Debug|x86.ActiveCfg = Debug|Win32
+		{474D88B3-6BF1-4BE7-B2F5-806F0B0AD0B5}.Debug|x86.Build.0 = Debug|Win32
+		{474D88B3-6BF1-4BE7-B2F5-806F0B0AD0B5}.Release|x86.ActiveCfg = Release|Win32
+		{474D88B3-6BF1-4BE7-B2F5-806F0B0AD0B5}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5762A227-32FD-4C63-B9E9-7E7415C875D5}
+	EndGlobalSection
+EndGlobal
