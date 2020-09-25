@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-        <ProjectConfiguration Include="Debug|Win32">
+    <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
@@ -15,8 +15,7 @@
     <Keyword>QtVS_v303</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">10.0.18362.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">10.0.18362.0</WindowsTargetPlatformVersion>
-    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')"
-      >$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
@@ -28,11 +27,8 @@
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <Target Name="QtMsBuildNotFound"
-    BeforeTargets="CustomBuild;ClCompile"
-    Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
-    <Message Importance="High"
-      Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
   </Target>
   <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="Shared" />
@@ -52,12 +48,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
     <QtInstall>5.15.1</QtInstall>
-    <QtModules></QtModules>
+    <QtModules>core;gui;opengl;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
     <QtInstall>5.15.1</QtInstall>
-    <QtModules></QtModules>
+    <QtModules>core;gui;opengl;widgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
@@ -90,7 +86,172 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-
+    <ClInclude Include="VizCApplicationData.h" />
+    <ClInclude Include="VizCCompany.h" />
+    <ClInclude Include="VizCDataInspector.h" />
+    <ClInclude Include="VizCEditActions.h" />
+    <ClInclude Include="VizCMemoryLeakReport.h" />
+    <ClInclude Include="VizCMemoryUtils.h" />
+    <ClInclude Include="VizCPropertiesAliasNames.h" />
+    <ClInclude Include="VizCRealTimePeriod.h" />
+    <ClInclude Include="VizCSecurity.h" />
+    <ClInclude Include="VizCSecurityPeriod.h" />
+    <ClInclude Include="VizCSecurityPeriodsManipulator.h" />
+    <ClInclude Include="VizCSettings.h" />
+    <ClInclude Include="VizCSplit.h" />
+    <ClInclude Include="VizCTechnicalAnalysisFunctions.h" />
+    <ClInclude Include="VizCTPPacket.h" />
+    <ClInclude Include="VizCTradePeriod.h" />
+    <ClInclude Include="VizCUndoManager.h" />
+    <ClInclude Include="VizCUndoView.h" />
+    <ClInclude Include="VizGUIUtils.h" />
+    <ClInclude Include="VizLib.h" />
+    <ClInclude Include="VizMath.h" />
+    <ClInclude Include="VizMimeFormat.h" />
+    <ClInclude Include="VizObjectUtils.h" />
+    <ClInclude Include="VizRange.h" />
+    <ClInclude Include="VizTypes.h" />
+    <ClInclude Include="VizVersionNumber.h" />
+    <QtMoc Include="viztrader.h" />
+    <QtMoc Include="VizIInnerPanel.h" />
+    <QtMoc Include="VizIIndicator.h" />
+    <QtMoc Include="VizIGraphicsItemBasedOnShape.h" />
+    <QtMoc Include="VizIGraphicsItemBasedOnSecurity.h" />
+    <QtMoc Include="VizIGraphicsItem.h" />
+    <QtMoc Include="VizIChart.h" />
+    <QtMoc Include="VizCWorkAreaManagerWidget.h" />
+    <QtMoc Include="VizCWorkAreaManager.h" />
+    <QtMoc Include="VizCWorkArea.h" />
+    <QtMoc Include="VizCVolumeIndicator.h" />
+    <QtMoc Include="VizCVerticalScale.h" />
+    <QtMoc Include="VizCVerticalLine.h" />
+    <QtMoc Include="VizCUndoCommands.h" />
+    <QtMoc Include="VizCTrendLine.h" />
+    <QtMoc Include="VizCTP.h" />
+    <QtMoc Include="VizCToolManager.h" />
+    <QtMoc Include="VizCSortSecuritySearchModel.h" />
+    <QtMoc Include="VizCSemiLogTrendLine.h" />
+    <QtMoc Include="VizCSecurityWidget.h" />
+    <QtMoc Include="VizCSecuritySearchModel.h" />
+    <QtMoc Include="VizCSearchLineEdit.h" />
+    <QtMoc Include="VizCSearchEngine.h" />
+    <QtMoc Include="VizCSceneInspector.h" />
+    <QtMoc Include="VizCRelativeStrengthIndexIndicator.h" />
+    <QtMoc Include="VizCPropertyEditor.h" />
+    <QtMoc Include="VizCProject.h" />
+    <QtMoc Include="VizCPreviewGraphics.h" />
+    <QtMoc Include="VizCPlusDirectionalIndicator.h" />
+    <QtMoc Include="VizCOpenSecurityWidget.h" />
+    <QtMoc Include="VizCOpenIndicatorWidget.h" />
+    <QtMoc Include="VizCOfferBookPanel.h" />
+    <QtMoc Include="VizCMovingAverageIndicator.h" />
+    <QtMoc Include="VizCMountainChart.h" />
+    <QtMoc Include="VizCMinusDirectionalIndicator.h" />
+    <QtMoc Include="VizCMdiSubWindow.h" />
+    <QtMoc Include="VizCLoadingAnimation.h" />
+    <QtMoc Include="VizCLineChart.h" />
+    <QtMoc Include="VizCInnerPanelTitleBar.h" />
+    <QtMoc Include="VizCIndicatorSearchModel.h" />
+    <QtMoc Include="VizCHorizontalScale.h" />
+    <QtMoc Include="VizCHorizontalLine.h" />
+    <QtMoc Include="VizCHeikinAshiCandlesticksChart.h" />
+    <QtMoc Include="VizCHeikinAshiBarsChart.h" />
+    <QtMoc Include="VizCGraphicsPanel.h" />
+    <QtMoc Include="VizCFileThread.h" />
+    <QtMoc Include="VizCFile.h" />
+    <QtMoc Include="VizCDataFacade.h" />
+    <QtMoc Include="VizCClipboard.h" />
+    <QtMoc Include="VizCCertificateInformation.h" />
+    <QtMoc Include="VizCCandlesticksChart.h" />
+    <QtMoc Include="VizCCache.h" />
+    <QtMoc Include="VizCBrowserView.h" />
+    <QtMoc Include="VizCBollingerUpperBandIndicator.h" />
+    <QtMoc Include="VizCBollingerLowerBandIndicator.h" />
+    <QtMoc Include="VizCBollingerBandsIndicator.h" />
+    <QtMoc Include="VizCBarsChart.h" />
+    <QtMoc Include="VizCAverageDirectionalMovementIndexIndicator.h" />
+    <QtMoc Include="VizCApplicationSettings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="VizCApplicationData.cpp" />
+    <ClCompile Include="VizCApplicationSettings.cpp" />
+    <ClCompile Include="VizCAverageDirectionalMovementIndexIndicator.cpp" />
+    <ClCompile Include="VizCBarsChart.cpp" />
+    <ClCompile Include="VizCBollingerBandsIndicator.cpp" />
+    <ClCompile Include="VizCBollingerLowerBandIndicator.cpp" />
+    <ClCompile Include="VizCBollingerUpperBandIndicator.cpp" />
+    <ClCompile Include="VizCCache.cpp" />
+    <ClCompile Include="VizCCandlesticksChart.cpp" />
+    <ClCompile Include="VizCCertificateInformation.cpp" />
+    <ClCompile Include="VizCClipboard.cpp" />
+    <ClCompile Include="VizCCompany.cpp" />
+    <ClCompile Include="VizCDataFacade.cpp" />
+    <ClCompile Include="VizCDataInpector.cpp" />
+    <ClCompile Include="VizCEditActions.cpp" />
+    <ClCompile Include="VizCFile.cpp" />
+    <ClCompile Include="VizCFileThread.cpp" />
+    <ClCompile Include="VizCGraphicsPanel.cpp" />
+    <ClCompile Include="VizCHeikinAshiBarsChart.cpp" />
+    <ClCompile Include="VizCHeikinAshiCandlesticksChart.cpp" />
+    <ClCompile Include="VizCHorizontalLine.cpp" />
+    <ClCompile Include="VizCHorizontalScale.cpp" />
+    <ClCompile Include="VizCIndicatorSearchModel.cpp" />
+    <ClCompile Include="VizCInnerPanelTitleBar.cpp" />
+    <ClCompile Include="VizCLineChart.cpp" />
+    <ClCompile Include="VizCLoadingAnimation.cpp" />
+    <ClCompile Include="VizCMdiSubWindow.cpp" />
+    <ClCompile Include="VizCMemoryLeakReport.cpp" />
+    <ClCompile Include="VizCMemoryUtils.cpp" />
+    <ClCompile Include="VizCMinusDirectionalIndicator.cpp" />
+    <ClCompile Include="VizCMountainChart.cpp" />
+    <ClCompile Include="VizCMovingAverageIndicator.cpp" />
+    <ClCompile Include="VizCOfferBookPanel.cpp" />
+    <ClCompile Include="VizCOpenIndicatorWidget.cpp" />
+    <ClCompile Include="VizCOpenSecurityWidget.cpp" />
+    <ClCompile Include="VizCPlusDirectionalIndicator.cpp" />
+    <ClCompile Include="VizCPreviewGraphics.cpp" />
+    <ClCompile Include="VizCProject.cpp" />
+    <ClCompile Include="VizCPropertiesAliasNames.cpp" />
+    <ClCompile Include="VizCPropertyEditor.cpp" />
+    <ClCompile Include="VizCRealTimePeriod.cpp" />
+    <ClCompile Include="VizCRelativeStrengthIndexIndicator.cpp" />
+    <ClCompile Include="VizCSceneInspector.cpp" />
+    <ClCompile Include="VizCSearchEngine.cpp" />
+    <ClCompile Include="VizCSearchLineEdit.cpp" />
+    <ClCompile Include="VizCSecurity.cpp" />
+    <ClCompile Include="VizCSecurityPeriod.cpp" />
+    <ClCompile Include="VizCSecurityPeriodsManipulator.cpp" />
+    <ClCompile Include="VizCSecuritySearchModel.cpp" />
+    <ClCompile Include="VizCSecurityWidget.cpp" />
+    <ClCompile Include="VizCSemiLogTrendLine.cpp" />
+    <ClCompile Include="VizCSettings.cpp" />
+    <ClCompile Include="VizCSortSecuritySearchModel.cpp" />
+    <ClCompile Include="VizCSplit.cpp" />
+    <ClCompile Include="VizCTechnicalAnalysisFunctions.cpp" />
+    <ClCompile Include="VizCToolManager.cpp" />
+    <ClCompile Include="VizCTP.cpp" />
+    <ClCompile Include="VizCTPPacket.cpp" />
+    <ClCompile Include="VizCTradePeriod.cpp" />
+    <ClCompile Include="VizCTrendLine.cpp" />
+    <ClCompile Include="VizCUndoCommands.cpp" />
+    <ClCompile Include="VizCUndoManager.cpp" />
+    <ClCompile Include="VizCUndoView.cpp" />
+    <ClCompile Include="VizCVerticalLine.cpp" />
+    <ClCompile Include="VizCVerticalScale.cpp" />
+    <ClCompile Include="VizCVolumeIndicator.cpp" />
+    <ClCompile Include="VizCWorkArea.cpp" />
+    <ClCompile Include="VizCWorkAreaManager.cpp" />
+    <ClCompile Include="VizCWorkAreaManagerWidget.cpp" />
+    <ClCompile Include="VizGUIUtils.cpp" />
+    <ClCompile Include="VizIChart.cpp" />
+    <ClCompile Include="VizIGraphicsItem.cpp" />
+    <ClCompile Include="VizIGraphicsItemBasedOnSecurity.cpp" />
+    <ClCompile Include="VizIGraphicsItemBasedOnShape.cpp" />
+    <ClCompile Include="VizIIndicator.cpp" />
+    <ClCompile Include="VizIInnerPanel.cpp" />
+    <ClCompile Include="VizMath.cpp" />
+    <ClCompile Include="viztrader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

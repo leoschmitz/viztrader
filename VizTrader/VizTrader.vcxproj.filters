@@ -23,4 +23,502 @@
       <ParseFiles>false</ParseFiles>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VizCApplicationData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCCompany.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCDataInspector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCEditActions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCMemoryLeakReport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCMemoryUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCPropertiesAliasNames.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCRealTimePeriod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCSecurity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCSecurityPeriod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCSecurityPeriodsManipulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCSplit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCTechnicalAnalysisFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCTPPacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCTradePeriod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCUndoManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizCUndoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizGUIUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizMath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizMimeFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizObjectUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizRange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VizVersionNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="VizCApplicationSettings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCAverageDirectionalMovementIndexIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCBarsChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCBollingerBandsIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCBollingerLowerBandIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCBollingerUpperBandIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCBrowserView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCCache.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCCandlesticksChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCCertificateInformation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCClipboard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCDataFacade.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCFile.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCFileThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCGraphicsPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCHeikinAshiBarsChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCHeikinAshiCandlesticksChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCHorizontalLine.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCHorizontalScale.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCIndicatorSearchModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCInnerPanelTitleBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCLineChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCLoadingAnimation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCMdiSubWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCMinusDirectionalIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCMountainChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCMovingAverageIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCOfferBookPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCOpenIndicatorWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCOpenSecurityWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCPlusDirectionalIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCPreviewGraphics.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCProject.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCPropertyEditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCRelativeStrengthIndexIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCSceneInspector.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCSearchEngine.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCSearchLineEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCSecuritySearchModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCSecurityWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCSemiLogTrendLine.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCSortSecuritySearchModel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCToolManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCTP.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCTrendLine.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCUndoCommands.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCVerticalLine.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCVerticalScale.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCVolumeIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCWorkArea.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCWorkAreaManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizCWorkAreaManagerWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizIChart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizIGraphicsItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizIGraphicsItemBasedOnSecurity.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizIGraphicsItemBasedOnShape.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizIIndicator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VizIInnerPanel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="viztrader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCApplicationData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCApplicationSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCAverageDirectionalMovementIndexIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCBarsChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCBollingerBandsIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCBollingerLowerBandIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCBollingerUpperBandIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCCandlesticksChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCCertificateInformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCClipboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCCompany.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCDataFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCDataInpector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCEditActions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCFileThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCGraphicsPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCHeikinAshiBarsChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCHeikinAshiCandlesticksChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCHorizontalLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCHorizontalScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCIndicatorSearchModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCInnerPanelTitleBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCLineChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCLoadingAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCMdiSubWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCMemoryLeakReport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCMemoryUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCMinusDirectionalIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCMountainChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCMovingAverageIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCOfferBookPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCOpenIndicatorWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCOpenSecurityWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCPlusDirectionalIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCPreviewGraphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCPropertiesAliasNames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCPropertyEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCRealTimePeriod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCRelativeStrengthIndexIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSceneInspector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSearchEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSearchLineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSecurity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSecurityPeriod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSecurityPeriodsManipulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSecuritySearchModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSecurityWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSemiLogTrendLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSortSecuritySearchModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCSplit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCTechnicalAnalysisFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCToolManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCTP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCTPPacket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCTradePeriod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCTrendLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCUndoCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCUndoManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCUndoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCVerticalLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCVerticalScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCVolumeIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCWorkArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCWorkAreaManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizCWorkAreaManagerWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizGUIUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizIChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizIGraphicsItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizIGraphicsItemBasedOnSecurity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizIGraphicsItemBasedOnShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizIIndicator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizIInnerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VizMath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viztrader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
