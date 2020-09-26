@@ -4,3 +4,5 @@ moc/
 *.pdb
 *.log
 *.tlog/
+temp/
+uic/
