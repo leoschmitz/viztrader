@@ -30,7 +30,7 @@
 <QMake_QMAKE_VERSION_>3.1</QMake_QMAKE_VERSION_>
 <QMake_QT_VERSION_>5.15.1</QMake_QT_VERSION_>
 <Qt_INCLUDEPATH_
-      >$(Qt_INCLUDEPATH_);Release\moc</Qt_INCLUDEPATH_>
+      >$(Qt_INCLUDEPATH_);Release\moc;Release\uic</Qt_INCLUDEPATH_>
     <QtBkup_QtInstall
       >5.15.1</QtBkup_QtInstall>
     <QtBkup_QtModules
@@ -44,7 +44,7 @@
     <QtBkup_QtLibrarySearchPath
       ></QtBkup_QtLibrarySearchPath>
     <QtBkup_QtVars
-      >DEFINES=/-D([^\s=]+(=(\x22(\\\\|\\\x22|[^\x22])*\x22|\S+))?)/$1/;INCLUDEPATH=INCPATH/-I(\x22[^\x22]+\x22|[^\s]+)/$1/;LIBS=/(?:\/LIBPATH:(?:\x22[^\x22]+\x22|[^\s]+))|(\x22[^\x22]+\x22|[^\s]+)/$1/;LIBPATH=LIBS/\/LIBPATH:(\x22[^\x22]+\x22|[^\s]+)/$1/</QtBkup_QtVars>
+      >DEFINES=/-D([^\s=]+(=(\x22(\\\\|\\\x22|[^\x22])*\x22|\S+))?)/$1/;INCLUDEPATH=INCPATH/-(?:iquote|isystem|idirafter|I)\s*(\x22[^\x22]+\x22|[^\s]+)/$1/;LIBS=/(?:(?:\/LIBPATH:|-L)(?:\x22[^\x22]+\x22|[^\s]+))|(\x22[^\x22]+\x22|[^\s]+)/$1/;LIBPATH=LIBS/(?:\/LIBPATH:|-L)(\x22[^\x22]+\x22|[^\s]+)/$1/</QtBkup_QtVars>
     <QtBkup_QMakeCodeLines
       ></QtBkup_QMakeCodeLines>
     <QtBkup_QtBuildConfig
