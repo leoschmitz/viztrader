@@ -6,7 +6,7 @@
 #ifndef __VIZCCERTIFICATEINFORMATION_H__
 #define __VIZCCERTIFICATEINFORMATION_H__
 //-----------------------------------------------------------------------------
-#include <QtGui/QDialog>
+#include <QDialog>
 #include <QtNetwork/QSslCertificate>
 #include <QtNetwork/QSslCipher>
 #include "ui_VizCCertificateInformation.h"

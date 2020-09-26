@@ -36,9 +36,9 @@ public:
 		QHeaderView* HeaderView = horizontalHeader();
 		HeaderView->setDefaultAlignment(Qt::AlignLeft);
 		HeaderView->setStretchLastSection(true);
-		HeaderView->setResizeMode(QHeaderView::Interactive);
-		HeaderView->setClickable(false);
-		HeaderView->setMovable(false);
+		HeaderView->setSectionResizeMode(QHeaderView::Interactive);
+		HeaderView->setSectionsClickable(false);
+		HeaderView->setSectionsMovable(false);
 
 		verticalHeader()->setVisible(false);
 

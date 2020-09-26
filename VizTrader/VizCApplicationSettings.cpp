@@ -11,6 +11,7 @@
 #include <QStyleFactory>
 #include <QFontDialog>
 #include <QColorDialog>
+#include <QButtonGroup>
 #include <QDebug>
 //-----------------------------------------------------------------------------
 namespace viz
@@ -452,12 +453,12 @@ void VizCApplicationSettings::loadAppearanceTab()
 	Appearance_FontLabel4->setText(gui::fontValueText(Font[1]));
 
 
-	tmp = Settings->value("Appearance/DefaultFontAndColor/ForegroundColor", Qt::black).toString();
+	tmp = Settings->value("Appearance/DefaultFontAndColor/ForegroundColor", QColor(Qt::black)).toString();
 	Color[0] = QColor(tmp);
 	Appearance_ColorLabel1->setPixmap(gui::brushValuePixmap(Color[0]));
 	Appearance_ColorLabel2->setText(gui::colorValueText(Color[0]));
 
-	tmp = Settings->value("Appearance/DefaultFontAndColor/BackgroundColor", Qt::white).toString();
+	tmp = Settings->value("Appearance/DefaultFontAndColor/BackgroundColor", QColor(Qt::white)).toString();
 	Color[1] = QColor(tmp);
 	Appearance_ColorLabel3->setPixmap(gui::brushValuePixmap(Color[1]));
 	Appearance_ColorLabel4->setText(gui::colorValueText(Color[1]));

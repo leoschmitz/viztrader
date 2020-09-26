@@ -65,8 +65,8 @@ void VizCCertificateInformation::setCertificateChainAndCiphers(const QList<QSslC
 	{
         const QSslCertificate &cert = Chain.at(i);
         certificationPathView->addItem(tr("%1%2 (%3)").arg(!i ? QString() : tr("Emitido por: "))
-                                             .arg(cert.subjectInfo(QSslCertificate::Organization))
-                                             .arg(cert.subjectInfo(QSslCertificate::CommonName)));
+                                             .arg(cert.subjectInfo(QSslCertificate::Organization).join(' '))
+                                             .arg(cert.subjectInfo(QSslCertificate::CommonName).join(' ')));
     }
 
     certificationPathView->setCurrentRow(0);
@@ -85,19 +85,19 @@ void VizCCertificateInformation::updateCertificateInfo(int index)
 		*/
 
         QStringList lines;
-        lines << tr("Organization: %1").arg(cert.subjectInfo(QSslCertificate::Organization))
-              << tr("Subunit: %1").arg(cert.subjectInfo(QSslCertificate::OrganizationalUnitName))
-              << tr("Country: %1").arg(cert.subjectInfo(QSslCertificate::CountryName))
-              << tr("Locality: %1").arg(cert.subjectInfo(QSslCertificate::LocalityName))
-              << tr("State/Province: %1").arg(cert.subjectInfo(QSslCertificate::StateOrProvinceName))
-              << tr("Common Name: %1").arg(cert.subjectInfo(QSslCertificate::CommonName))
+        lines << tr("Organization: %1").arg(cert.subjectInfo(QSslCertificate::Organization).join(' '))
+              << tr("Subunit: %1").arg(cert.subjectInfo(QSslCertificate::OrganizationalUnitName).join(' '))
+              << tr("Country: %1").arg(cert.subjectInfo(QSslCertificate::CountryName).join(' '))
+              << tr("Locality: %1").arg(cert.subjectInfo(QSslCertificate::LocalityName).join(' '))
+              << tr("State/Province: %1").arg(cert.subjectInfo(QSslCertificate::StateOrProvinceName).join(' '))
+              << tr("Common Name: %1").arg(cert.subjectInfo(QSslCertificate::CommonName).join(' '))
               << QString()
-              << tr("Issuer Organization: %1").arg(cert.issuerInfo(QSslCertificate::Organization))
-              << tr("Issuer Unit Name: %1").arg(cert.issuerInfo(QSslCertificate::OrganizationalUnitName))
-              << tr("Issuer Country: %1").arg(cert.issuerInfo(QSslCertificate::CountryName))
-              << tr("Issuer Locality: %1").arg(cert.issuerInfo(QSslCertificate::LocalityName))
-              << tr("Issuer State/Province: %1").arg(cert.issuerInfo(QSslCertificate::StateOrProvinceName))
-              << tr("Issuer Common Name: %1").arg(cert.issuerInfo(QSslCertificate::CommonName));
+              << tr("Issuer Organization: %1").arg(cert.issuerInfo(QSslCertificate::Organization).join(' '))
+              << tr("Issuer Unit Name: %1").arg(cert.issuerInfo(QSslCertificate::OrganizationalUnitName).join(' '))
+              << tr("Issuer Country: %1").arg(cert.issuerInfo(QSslCertificate::CountryName).join(' '))
+              << tr("Issuer Locality: %1").arg(cert.issuerInfo(QSslCertificate::LocalityName).join(' '))
+              << tr("Issuer State/Province: %1").arg(cert.issuerInfo(QSslCertificate::StateOrProvinceName).join(' '))
+              << tr("Issuer Common Name: %1").arg(cert.issuerInfo(QSslCertificate::CommonName).join(' '));
 		foreach (QString line, lines)
 		{
 			//QString l = codec->fromUnicode(line);

@@ -3,8 +3,7 @@
 // Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
-#include <QtGui/QApplication>
-#include <QtSingleApplication>
+#include <QApplication>
 #include <QMessageBox>
 #include <QtGlobal>
 #include "viztrader.h"
@@ -39,14 +38,9 @@ int main(int argc, char *argv[])
 	QT_REQUIRE_VERSION(argc, argv, "4.6.0");
 	Q_ASSERT(QSystemTrayIcon::isSystemTrayAvailable());
 
-	qInstallMsgHandler(VizMessageOutput);
+	qInstallMessageHandler(VizMessageOutput);
 
-	//QApplication app(argc, argv);
-	QtSingleApplication app(argc, argv);
-	if(app.isRunning())
-	{
-		return 0;
-	}
+	QApplication app(argc, argv);
 
 	VizTrader vizTrader;
 	app.setActivationWindow(&vizTrader);

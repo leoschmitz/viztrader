@@ -78,8 +78,8 @@ void VizCSettings::loadApplicationSettings()
 	loadSetting("Appearance/System/Style", gui::styleValueText(QApplication::style()));
 	loadSetting("Appearance/DefaultFontAndColor/Font", this->value("DefaultFont"));
 	loadSetting("Appearance/Items/Font", this->value("DefaultFont"));
-	loadSetting("Appearance/DefaultFontAndColor/ForegroundColor", Qt::black);
-	loadSetting("Appearance/DefaultFontAndColor/BackgroundColor", Qt::white);
+	loadSetting("Appearance/DefaultFontAndColor/ForegroundColor", QColor(Qt::black));
+	loadSetting("Appearance/DefaultFontAndColor/BackgroundColor", QColor(Qt::white));
 	loadSetting("Appearance/DefaultFontAndColor/GridColor", gui::VizGray);
 	loadSetting("Appearance/Charts/UpColor", gui::VizGreen);
 	loadSetting("Appearance/Charts/DownColor", gui::VizRed);

@@ -6,6 +6,7 @@
 #include "VizCClipboard.h"
 #include "VizMimeFormat.h"
 #include <QDebug>
+#include <QMimeData>
 //-----------------------------------------------------------------------------
 namespace viz
 {

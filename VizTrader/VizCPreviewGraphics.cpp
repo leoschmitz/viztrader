@@ -9,6 +9,7 @@
 #include <QPen>
 #include <QVariant>
 #include <QPainter>
+#include <QPainterPath>
 //-----------------------------------------------------------------------------
 namespace viz
 {

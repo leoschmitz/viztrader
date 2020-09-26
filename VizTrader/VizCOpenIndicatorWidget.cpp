@@ -16,6 +16,9 @@
 #include <QListView>
 #include <QTreeView>
 #include <QHeaderView>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QGroupBox>
 //-----------------------------------------------------------------------------
 namespace viz
 {

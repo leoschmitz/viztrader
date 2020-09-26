@@ -17,6 +17,9 @@
 #include <QDir>
 #include <QApplication>
 #include <QMovie>
+#include <QVBoxLayout>
+#include <QGroupBox>
+#include <QPushButton>
 //-----------------------------------------------------------------------------
 namespace viz
 {

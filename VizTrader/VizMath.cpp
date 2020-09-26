@@ -16,7 +16,7 @@ namespace core
 QString md5(const QString& plain)
 {
 	QCryptographicHash md5(QCryptographicHash::Md5);
-	md5.addData(plain.toAscii());
+	md5.addData(plain.toLatin1());
 	QString out(md5.result().toHex());
 	return out;
 }

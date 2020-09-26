@@ -13,6 +13,7 @@
 #include <QVariant>
 #include <QMetaProperty>
 #include <QMetaProperty>
+#include <QDataStream>
 #include "VizCMemoryLeakReport.h"
 //-----------------------------------------------------------------------------
 namespace viz
