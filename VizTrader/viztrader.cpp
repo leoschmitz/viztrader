@@ -32,7 +32,7 @@ using namespace net;
 using namespace io;
 using namespace system;
 //-------f----------------------------------------------------------------------
-VizTrader::VizTrader(QWidget* parent, Qt::WFlags flags)	: QMainWindow(parent, flags), DataFacade(0), OpenSecurityWidget(0), PropertyEditor(0), SceneInspector(0), DataInspector(0), ToolManager(0), ApplicationSettings(0), ApplicationNetworkStatus(0), MdiArea(0), WorkArea(0), UndoManager(0), WorkAreaComboBox(0), CurrentWorkAreaIndex(0), AutoConnecting(false)
+VizTrader::VizTrader()	: DataFacade(0), OpenSecurityWidget(0), PropertyEditor(0), SceneInspector(0), DataInspector(0), ToolManager(0), ApplicationSettings(0), ApplicationNetworkStatus(0), MdiArea(0), WorkArea(0), UndoManager(0), WorkAreaComboBox(0), CurrentWorkAreaIndex(0), AutoConnecting(false)
 {
 	setWindowIcon(QIcon(":/VizTrader/Resources/windowIconBig.png"));
 	ApplicationData = VizCApplicationData::instance();
@@ -1936,8 +1936,14 @@ void VizTrader::autoAjustWindow()
 //-----------------------------------------------------------------------------
 void VizTrader::showHideStatusBar()
 {
-
-	statusBar()->setShown(!statusBar()->isVisible());
+	if (statusBar()->isVisible())
+	{
+		statusBar()->show();
+	}
+	else
+	{
+		statusBar()->hide();
+	}
 
 }
 //-----------------------------------------------------------------------------

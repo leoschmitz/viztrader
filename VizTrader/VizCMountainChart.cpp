@@ -10,6 +10,7 @@
 #include <QDebug>
 #include <QPen>
 #include <QVariant>
+#include <QPainterPath>
 //-----------------------------------------------------------------------------
 namespace viz
 {

@@ -14,6 +14,7 @@
 #include <QButtonGroup>
 #include <QDebug>
 #include <QApplication>
+#include <QPainterPath>
 //-----------------------------------------------------------------------------
 namespace viz
 {
@@ -855,7 +856,7 @@ void VizCHorizontalScale::mousePressEvent(QMouseEvent* event)
 	QRectF rect2(point2, sizePlusOne2);
 
 
-	QPointF pos = event->posF();
+	QPointF pos = event->localPos();
 
 	if(rect1.contains(pos))
 	{
@@ -881,7 +882,7 @@ void VizCHorizontalScale::mousePressEvent(QMouseEvent* event)
 //-----------------------------------------------------------------------------
 void VizCHorizontalScale::mouseMoveEvent(QMouseEvent* event)
 {
-	QPointF pos = event->posF();
+	QPointF pos = event->localPos();
 	QRect viewport = slidersViewPort();
 
 	bool ok = false;

@@ -21,6 +21,8 @@
 #include <QLabel>
 #include <QDebug>
 #include <QMovie>
+#include <QMimeData>
+#include <QDrag>
 //-----------------------------------------------------------------------------
 namespace viz
 {
@@ -237,7 +239,7 @@ VizIGraphicsItemBasedOnSecurity* VizCGraphicsPanel::privateNewGraphicsItemBasedO
 		return 0;
 	}
 
-	void* myClassPtr = QMetaType::construct(id);
+	void* myClassPtr = QMetaType::create(id);
 	Q_ASSERT(myClassPtr);
 	item = static_cast<VizIGraphicsItemBasedOnSecurity*>(myClassPtr);
 
@@ -259,7 +261,7 @@ VizIGraphicsItemBasedOnShape* VizCGraphicsPanel::privateNewVizIGraphicsItemBased
 		return 0;
 	}
 
-	void* myClassPtr = QMetaType::construct(id);
+	void* myClassPtr = QMetaType::create(id);
 	Q_ASSERT(myClassPtr);
 	item = static_cast<VizIGraphicsItemBasedOnShape*>(myClassPtr);
 	item->setIsRemovable(isRemovable);
@@ -453,7 +455,7 @@ void VizCGraphicsPanel::createFakeItem()
 	int id = QMetaType::type(qPrintable(name));
 	Q_ASSERT(id != -1);
 
-	void* myClassPtr = QMetaType::construct(id);
+	void* myClassPtr = QMetaType::create(id);
 	Q_ASSERT(myClassPtr);
 	FakeItem = static_cast<VizIGraphicsItemBasedOnShape*>(myClassPtr);
 

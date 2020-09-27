@@ -11,8 +11,10 @@
 //#include "VizCMemoryLeakReport.h"
 //viz::system::VizCMemoryLeakReport MemoryLeakReport;
 //-----------------------------------------------------------------------------
-void VizMessageOutput(QtMsgType type, const char* msg)
+void VizMessageOutput(QtMsgType type, const QMessageLogContext& context, const QString& message)
 {
+	QByteArray bytes = message.toLocal8Bit();
+	const char* msg = bytes.data();
 	switch (type)
 	{
 		case QtDebugMsg:
@@ -35,7 +37,7 @@ void VizMessageOutput(QtMsgType type, const char* msg)
 //-----------------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
-	QT_REQUIRE_VERSION(argc, argv, "4.6.0");
+	QT_REQUIRE_VERSION(argc, argv, "5.1.15");
 	Q_ASSERT(QSystemTrayIcon::isSystemTrayAvailable());
 
 	qInstallMessageHandler(VizMessageOutput);
@@ -43,7 +45,7 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 
 	VizTrader vizTrader;
-	app.setActivationWindow(&vizTrader);
+	//app.setActivationWindow(&vizTrader);
 
 	app.connect(&app, SIGNAL(commitDataRequest(QSessionManager&)), &vizTrader, SLOT(commitDataRequest(QSessionManager&)));
 

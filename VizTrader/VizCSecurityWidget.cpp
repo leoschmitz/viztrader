@@ -18,6 +18,7 @@
 #include <QDebug>
 #include <QMetaProperty>
 #include <QApplication>
+#include <QMimeData>
 //-----------------------------------------------------------------------------
 namespace viz
 {

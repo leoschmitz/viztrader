@@ -221,10 +221,12 @@ void VizCInnerPanelTitleBar::ajustAlphaChannel(QPixmap& pix, f64 alphaValue)
 	QPixmap alpha(pix.size());
 	alpha.fill(Qt::transparent);
 	QPainter painter(&alpha);
+	painter.setOpacity(alphaValue);
 	QColor color(0,0,0,0);
-	color.setAlphaF(alphaValue);
+	//color.setAlphaF(alphaValue);
 	painter.fillRect(0, 0, alpha.width(), alpha.height(), color);
-	pix.setAlphaChannel(alpha.alphaChannel());
+	//pix.setAlphaChannel(alpha.alphaChannel());
+
 
 }
 //-----------------------------------------------------------------------------

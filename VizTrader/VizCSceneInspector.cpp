@@ -8,6 +8,8 @@
 #include <QDebug>
 #include <QHeaderView>
 #include <QApplication>
+#include <QMimeData>
+#include <QDrag>
 //-----------------------------------------------------------------------------
 namespace viz
 {

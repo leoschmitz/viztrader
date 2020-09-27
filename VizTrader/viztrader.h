@@ -30,7 +30,7 @@ class VizTrader : public QMainWindow
 	Q_OBJECT
 
 public:
-	VizTrader(QWidget *parent = 0, Qt::WFlags flags = 0);
+	VizTrader();
 	~VizTrader();
 
 protected:

@@ -18,6 +18,8 @@
 #include <QMetaProperty>
 #include <QDebug>
 #include <QLabel>
+#include <QMimeData>
+#include <QDrag>
 //-----------------------------------------------------------------------------
 namespace viz
 {
