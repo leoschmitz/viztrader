@@ -1,0 +1,11 @@
+Ao estabelecer conexão com um site seguro, o servidor que hospeda o site apresenta ao seu navegador algo chamado "certificado" para confirmar sua identidade.
+
+Esse certificado contém informações de identidade, como o endereço do site, que são confirmadas por um terceiro confiável para seu computador.
+
+Depois de verificar que o endereço no certificado corresponde ao endereço do site, é possível confirmar que você está se comunicando com segurança com o site desejado e não com terceiros (como um invasor da sua rede).
+
+Nesse caso, o certificado não foi confirmado por um terceiro em quem seu computador confia. Qualquer um pode criar um certificado dizendo ser procedente de qualquer site e, por esse motivo, deve ser confirmado por um terceiro confiável.
+
+Sem essa confirmação, as informações de identidade do certificado não são significativas. Desse modo, não é possível confirmar que você está se comunicando com servidor VizTrader e não com um invasor que gerou seu próprio certificado dizendo ser o VizTrader.
+
+Você não deve continuar depois deste ponto.

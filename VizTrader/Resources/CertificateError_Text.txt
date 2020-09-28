@@ -1,0 +1,9 @@
+<p>
+Você tentou acessar o sistema de autenticação, mas o servidor apresentou um certificado emitido por uma entidade que não é confiável para o sistema operacional do seu computador.
+</p>
+<p>
+Isso talvez indique que o servidor gerou suas próprias credenciais de segurança, em cujas informações de identidade o VizTrader não confia, ou que um intruso pode estar tentando interceptar suas comunicações.
+</p>
+<p>
+Você não deve continuar, principalmente se nunca tiver visto esse aviso antes neste programa.
+</p>
