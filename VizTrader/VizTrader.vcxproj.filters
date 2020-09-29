@@ -22,9 +22,6 @@
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Resources">
-      <UniqueIdentifier>{90328d26-7f44-4254-a0fa-6367f893b182}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VizCApplicationData.h">
@@ -103,6 +100,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VizVersionNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -533,190 +533,8 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\About.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\AboutScreen.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\addtab.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\addWorkArea.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\AutoAjustWindow.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\CascadeWindow.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\certificateKey.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\CloseInnerpanel.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\closetab.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\Crosshairs.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\DataWindow.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\delete.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\desktop-32.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\down.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\edit.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\editcopy.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\editcut.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\editpaste.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\editredo.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\editundo.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\go-next.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\go-previous.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\HorizontalLine.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\loading.gif">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\locked.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\login.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\loginLogo.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\loginLogoCertificateError.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\logout.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\newtab.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\open.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\Pan.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\PanelLoading.gif">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\PeriodicityDaily.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\PeriodicityMonthly.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\PeriodicityQuarterly.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\PeriodicityWeekly.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\PeriodicityYearly.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\RefreshData.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\removeWorkArea.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\save.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\saveAll.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\SelectionTool.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\SemiLogTrendLine.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\SplashScreen.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\systrayIconOffline.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\systrayIconOnline.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\TileWindow.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\TrendLine.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\up.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\VerticalLine.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\windowIcon.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\windowIconBig.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\ZoomBox.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\ZoomIn.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\ZoomOut.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\ZoomReset.png">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="Resources\ZoomResetY.png">
-      <Filter>Resources</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Resources\CertificateError_DetailedText.txt">
-      <Filter>Resources</Filter>
-    </Text>
-    <Text Include="Resources\CertificateError_Text.txt">
-      <Filter>Resources</Filter>
-    </Text>
-    <Text Include="Resources\license.txt">
-      <Filter>Resources</Filter>
-    </Text>
+    <QtRcc Include="viztrader.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>
