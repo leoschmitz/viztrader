@@ -1,0 +1,8 @@
+- Install Qt to C:\Qt
+- clone https://github.com/qtproject/qt-solutions/tree/master/qtpropertybrowser
+- Run the Native x64 command prompt (VS2020)
+- Follow the given directions in QtPropertyBrowser
+  configure -library
+  qmake
+  nmake
+- Do the same with -debug

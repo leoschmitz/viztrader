@@ -38,7 +38,7 @@ void VizMessageOutput(QtMsgType type, const QMessageLogContext& context, const Q
 int main(int argc, char *argv[])
 {
 	QT_REQUIRE_VERSION(argc, argv, "5.1.15");
-	Q_ASSERT(QSystemTrayIcon::isSystemTrayAvailable());
+	//Q_ASSERT(QSystemTrayIcon::isSystemTrayAvailable());
 
 	qInstallMessageHandler(VizMessageOutput);
 
