@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2010 Visualitica SoluÁıes em VisualizaÁ„o LTDA. All rights reserved.
+// Copyright (C) 2008-2010 Visualitica Solu√ß√µes em Visualiza√ß√£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCFile.h"
@@ -43,7 +43,7 @@ bool VizCFile::loadTrade(const QString& symbol, core::VizCCompany &company, bool
 {
 	if (!loadSecurity(symbol, company))
 	{
-		emit error(QString(tr("%1 n„o foi carregada").arg(symbol)));
+		emit error(QString(tr("%1 n√£o foi carregada").arg(symbol)));
 		
 		return false;		
 	}
@@ -52,7 +52,7 @@ bool VizCFile::loadTrade(const QString& symbol, core::VizCCompany &company, bool
 	{
 		if(!loadSecurityPeriods(symbol, company.Securities[0].SecurityPeriods))
 		{
-			emit error(QString(tr("%1 n„o teve perÌodos carregados").arg(symbol)));
+			emit error(QString(tr("%1 n√£o teve per√≠odos carregados").arg(symbol)));
 
 			return false;		
 		}
@@ -212,7 +212,7 @@ void VizCFile::loadTradeList(QVector<QStringList>& tradeList)
 				listHistoric 
 					<< security.Symbol 
 					<< company.WholeName 
-					<< QString(tr("Di·ria"))
+					<< QString(tr("Di√°ria"))
 					<< security.NegotiableStart.toString(Qt::ISODate) 
 					<< security.NegotiableEnd.toString(Qt::ISODate);
 				tradeList.append(listHistoric);
@@ -386,7 +386,7 @@ bool VizCFile::deleteInvalidFile(QFile& file)
 
 	if (fileLimit == 32768)
 	{
-		emit error(tr("Arquivo n„o deletado:").arg(file.fileName()));
+		emit error(tr("Arquivo n√£o deletado:").arg(file.fileName()));
 		return false;
 	}
 	else
@@ -394,7 +394,7 @@ bool VizCFile::deleteInvalidFile(QFile& file)
 		setDataDirectory();
 		if (!file.remove())
 		{
-			emit error(tr("Arquivo n„o deletado:").arg(file.fileName()));
+			emit error(tr("Arquivo n√£o deletado:").arg(file.fileName()));
 			return false;
 		}
 	}
@@ -543,7 +543,7 @@ bool VizCFile::loadSecurityPeriods(const QString& symbol, QVector<core::VizCSecu
 	//////////////////////////////////////////////////////////////////////////
 
 
-	// para n„o ocorrer flood manda-se a porcentagem aos pulos de periods
+	// para n√£o ocorrer flood manda-se a porcentagem aos pulos de periods
 	int jump(0);
 	while (!fileStream.atEnd())
 	{

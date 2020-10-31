@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCMovingAverageIndicator.h"
@@ -49,7 +49,7 @@ void VizCMovingAverageIndicator::resetToDefaults()
 
 	gui::vizObjectGetAllPropertiesNamesAndValues(this, names, newValues);
 
-	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores Padrão"));
+	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores PadrÃ£o"));
 	emit itemChanged(true);
 }
 //-----------------------------------------------------------------------------
@@ -206,7 +206,7 @@ void VizCMovingAverageIndicator::updateData()
 	Periods = TechnicalAnalysisFunctions->movingAverage(Periods, TimePeriod, PriceField, MovingAverageMethod);
 
 	
-	QString name = tr("Média Móvel");
+	QString name = tr("MÃ©dia MÃ³vel");
 	QString t = QString("%1 (%2)").arg(name).arg(SecuritySymbol);
 	vizObjectSetName(this, t);
 	
@@ -260,12 +260,12 @@ QString VizCMovingAverageIndicator::toolTip(const QPointF& p) const
 		}
 		case viz::VEPF_MAX_PRICE:
 		{
-			priceField = tr("Máximo");
+			priceField = tr("MÃ¡ximo");
 			break;
 		}
 		case viz::VEPF_MIN_PRICE:
 		{
-			priceField = ("Mínimo");
+			priceField = ("MÃ­nimo");
 			break;
 		}
 	};

@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2010 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2010 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizMath.h"
@@ -291,8 +291,8 @@ void VizCHorizontalScale::createPeriodicityMenu()
 	//connect(HorizontalScale, SIGNAL(periodicityChange()), this, SLOT(slotSetPeriodicity()));
 
 	
-	PeriodicityActions[0] = new QAction(tr("Diário"), this);
-	PeriodicityActions[0]->setStatusTip(tr("Diário"));
+	PeriodicityActions[0] = new QAction(tr("DiÃ¡rio"), this);
+	PeriodicityActions[0]->setStatusTip(tr("DiÃ¡rio"));
 	PeriodicityActions[0]->setCheckable(true);
 	connect(PeriodicityActions[0], SIGNAL(triggered()), this, SLOT(slotSetPeriodicityDayly()));
 

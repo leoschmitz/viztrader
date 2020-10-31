@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCSemiLogTrendLine.h"
@@ -46,7 +46,7 @@ void VizCSemiLogTrendLine::resetToDefaults()
 
 	gui::vizObjectGetAllPropertiesNamesAndValues(this, names, newValues);
 
-	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores Padrão"));
+	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores PadrÃ£o"));
 	emit itemChanged(true);
 }
 //-----------------------------------------------------------------------------
@@ -303,7 +303,7 @@ QString VizCSemiLogTrendLine::toolTip(const QPointF& p) const
 
 	f64 y = isSemiLogarithmicScale ? core::pow10f(p.y()) : p.y();
 	
-	QString s = QString(tr("%1\nInício: (%2, %L3)\nFim: (%4, %L5) \nData: %6\nValor: %L7\nInclinação: %8"))
+	QString s = QString(tr("%1\nInÃ­cio: (%2, %L3)\nFim: (%4, %L5) \nData: %6\nValor: %L7\nInclinaÃ§Ã£o: %8"))
 		.arg(tr("Semi-log Trend Line"))
 		.arg(StartDate.date().toString(Qt::SystemLocaleShortDate))
 		.arg(StartValue, 0, 'f', 2)

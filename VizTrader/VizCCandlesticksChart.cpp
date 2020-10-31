@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCCandlesticksChart.h"
@@ -176,7 +176,7 @@ void VizCCandlesticksChart::paint(QPainter* painter)
 	QPen shadowPen(shadowColor, pw + gui::ShadowWidth, Qt::SolidLine, DefaultPenCapStyle, DefaultPenJoinStyle);
 	shadowPen.setCosmetic(true);
 
-	//LOD - to reduce the Moiré pattern
+	//LOD - to reduce the MoirÃ© pattern
 	s32 pointsCount = RectsDown.size() + RectsUp.size();
 	s32 w = painter->viewport().width();
 	const s32 pixels = 2;

@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCSecurity.h"
@@ -215,7 +215,7 @@ void VizCSecurity::mergeAttributes(const VizCSecurity& other)
 	Protection = (Protection.isEmpty()) ? other.Protection : Protection;	
 	Negotiable &= other.Negotiable; 
 
-	// Casos que exigem cuidado para sincronização no servidor
+	// Casos que exigem cuidado para sincronizaÃ§Ã£o no servidor
 	NegotiableStart = (NegotiableEnd > NegotiableStart) ? 
 		(other.NegotiableStart > NegotiableStart ? other.NegotiableStart : NegotiableStart) :
 		NegotiableStart;

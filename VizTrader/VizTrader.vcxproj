@@ -48,7 +48,7 @@
       <AdditionalIncludeDirectories>C:\Qt\qt-solutions\qtpropertybrowser\src;.\Third-party\ta-lib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ta_abstract_cmd.lib;ta_common_cmd.lib;ta_func_cmd.lib;ta_libc_cmd.lib;QtSolutions_PropertyBrowser-head.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ta_abstract_cmd.lib;ta_common_cmd.lib;ta_func_cmd.lib;ta_libc_cmd.lib;QtSolutions_PropertyBrowser-headd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>.\Third-party\ta-lib\lib;C:\Qt\qt-solutions\qtpropertybrowser\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

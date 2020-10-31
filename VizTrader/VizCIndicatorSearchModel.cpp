@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCIndicatorSearchModel.h"
@@ -22,7 +22,7 @@ VizCIndicatorSearchModel::VizCIndicatorSearchModel(QObject * parent) : QAbstract
 	(
 		QStringList()
 		<< tr("MA")
-		<< tr("Média Móvel")
+		<< tr("MÃ©dia MÃ³vel")
 		<< tr("Moving Average (MA)")
 		<< tr("Media Movel")
 		<< "viz::gui::VizCMovingAverageIndicator"
@@ -58,7 +58,7 @@ VizCIndicatorSearchModel::VizCIndicatorSearchModel(QObject * parent) : QAbstract
 	(
 		QStringList()
 		<< tr("ADX")
-		<< tr("Índice Direcional Médio")
+		<< tr("Ãndice Direcional MÃ©dio")
 		<< tr("Average Directional Index (ADX)")
 		<< tr("Indice Direcional Medio")
 		<< "viz::gui::VizCAverageDirectionalMovementIndexIndicator"
@@ -68,7 +68,7 @@ VizCIndicatorSearchModel::VizCIndicatorSearchModel(QObject * parent) : QAbstract
 	(
 		QStringList()
 		<< tr("RSI")
-		<< tr("Índice de Força Relativa")
+		<< tr("Ãndice de ForÃ§a Relativa")
 		<< tr("Relative Strength Index (RSI)")
 		<< tr("Indice de Forca Relativa")
 		<< "viz::gui::VizCRelativeStrengthIndexIndicator"
@@ -129,7 +129,7 @@ QVariant VizCIndicatorSearchModel::headerData(int section ,
 		return QString("Nome");
 		break;
 	case 2:
-		return QString("Nome em Inglês");
+		return QString("Nome em InglÃªs");
 		break;
 	case 3:
 		return QString("name pt-br clean");

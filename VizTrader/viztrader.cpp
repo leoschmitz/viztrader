@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "viztrader.h"
@@ -39,7 +39,7 @@ VizTrader::VizTrader()	: DataFacade(0), OpenSecurityWidget(0), PropertyEditor(0)
 	QPixmap image(":/VizTrader/Resources/SplashScreen.png");
 	QSplashScreen* SplashScreen = new QSplashScreen(image);
 	////////////////////////////////////////////////
-	QLabel* versionLabel = new QLabel(QString("<font color=\"#292929\">Versão: <b>%1</b></font>").arg(ApplicationData->applicationVersion().toShortString()));
+	QLabel* versionLabel = new QLabel(QString("<font color=\"#292929\">VersÃ£o: <b>%1</b></font>").arg(ApplicationData->applicationVersion().toShortString()));
 	versionLabel->setParent(SplashScreen);
 	versionLabel->setTextFormat(Qt::RichText);
 	versionLabel->setGeometry(245, 0, versionLabel->geometry().width(), 335);
@@ -47,7 +47,7 @@ VizTrader::VizTrader()	: DataFacade(0), OpenSecurityWidget(0), PropertyEditor(0)
 	SplashScreen->show();
 	versionLabel->show();
 	////////////////////////////////////////////////
-	SplashScreen->showMessage("Carregando Configurações Globais...", Qt::AlignLeft | Qt::AlignBottom, Qt::black);
+	SplashScreen->showMessage("Carregando ConfiguraÃ§Ãµes Globais...", Qt::AlignLeft | Qt::AlignBottom, Qt::black);
 	applicationSettings();
 	registerMetaTypes();
 	Settings = VizCSettings::instance();
@@ -99,7 +99,7 @@ VizTrader::VizTrader()	: DataFacade(0), OpenSecurityWidget(0), PropertyEditor(0)
 	connect(ToolManager, SIGNAL(changed()), this, SLOT(updateToolBar()));
 	////////////////////////////////////////////////
 	
-	SplashScreen->showMessage("Carregando Configurações do Usuário...", Qt::AlignLeft | Qt::AlignBottom, Qt::black);
+	SplashScreen->showMessage("Carregando ConfiguraÃ§Ãµes do UsuÃ¡rio...", Qt::AlignLeft | Qt::AlignBottom, Qt::black);
 	readSettings();
 	////////////////////////////////////////////////
 	SplashScreen->finish(this);
@@ -394,7 +394,7 @@ void VizTrader::workAreaLoad()
 	//temporario essa coisa aqui
 	for(s32 count = 0; count < 2; count++)
 	{
-		QString name = tr("Área de Trabalho %1").arg(count);
+		QString name = tr("Ãrea de Trabalho %1").arg(count);
 		s32 index = WorkAreaManager->newWorkArea(name);
 
 		QPair<QString, VizCWorkArea*> wa = WorkAreaManager->workArea(index);
@@ -520,7 +520,7 @@ void VizTrader::changeClientStatus()
 		LoadingMovie->setVisible(false);
 		ClientStatusButton->setDisabled(false);
 		ClientStatusButton->setText(tr("Conectado"));
-		ClientStatusButton->setToolTip(tr("Informações do certificado de segurança"));
+		ClientStatusButton->setToolTip(tr("InformaÃ§Ãµes do certificado de seguranÃ§a"));
 		ClientStatusButton->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
 		LoginAct->setEnabled(false);
@@ -573,10 +573,10 @@ void VizTrader::vizServerCertificateReady(bool isValid)
 		QString DetailedText = inCertificate2.readAll();
 		certificateError2.close();
 
-		QMessageBox msgBox(QMessageBox::Warning, tr("O certificado de segurança não é confiável."), Message, 0, this);
+		QMessageBox msgBox(QMessageBox::Warning, tr("O certificado de seguranÃ§a nÃ£o Ã© confiÃ¡vel."), Message, 0, this);
 		msgBox.setTextFormat(Qt::RichText);
 		QPushButton* b1 = msgBox.addButton(tr("Continuar mesmo assim"), QMessageBox::AcceptRole);
-		QPushButton* b2 = msgBox.addButton(tr("Voltar à segurança"), QMessageBox::RejectRole);
+		QPushButton* b2 = msgBox.addButton(tr("Voltar Ã  seguranÃ§a"), QMessageBox::RejectRole);
 		msgBox.setDetailedText(DetailedText);
 
 		msgBox.setDefaultButton(b1);
@@ -612,7 +612,7 @@ void VizTrader::vizServerCertificateReady(bool isValid)
 	{
 		QPixmap image(":/VizTrader/Resources/loginLogoCertificateError.png");
 		LoginDialogImageLabel->setPixmap(image);
-		LoginDialogImageLabel->setToolTip(tr("O certificado de segurança não é confiável"));
+		LoginDialogImageLabel->setToolTip(tr("O certificado de seguranÃ§a nÃ£o Ã© confiÃ¡vel"));
 
 		LoginDialog->setStyleSheet("QDialog { background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #8c1021, stop: 1 #fefdfe); }");
 	}
@@ -620,7 +620,7 @@ void VizTrader::vizServerCertificateReady(bool isValid)
 	{
 		QPixmap image(":/VizTrader/Resources/loginLogo.png");
 		LoginDialogImageLabel->setPixmap(image);
-		LoginDialogImageLabel->setToolTip(tr("Ambiente seguro com proteção SSL"));
+		LoginDialogImageLabel->setToolTip(tr("Ambiente seguro com proteÃ§Ã£o SSL"));
 
 		LoginDialog->setStyleSheet("QDialog { background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #77a0b8, stop: 1 #fefdfe); }");
 	}
@@ -680,7 +680,7 @@ DIALOG_EXEC:
 
 		if(!checkUserAndPassword(name, pass))
 		{
-			QMessageBox msgBox(QMessageBox::Warning, tr("Erro"), tr("Usuário ou senha inválido."), 0, this);
+			QMessageBox msgBox(QMessageBox::Warning, tr("Erro"), tr("UsuÃ¡rio ou senha invÃ¡lido."), 0, this);
 			msgBox.addButton(QMessageBox::Ok);
 			msgBox.exec();
 			
@@ -738,7 +738,7 @@ void VizTrader::createLoginDialog()
 	QPixmap image(":/VizTrader/Resources/loginLogo.png");
 	LoginDialogImageLabel = new QLabel(LoginDialog);
 	LoginDialogImageLabel->setPixmap(image);
-	LoginDialogImageLabel->setToolTip(tr("Ambiente seguro com proteção SSL"));
+	LoginDialogImageLabel->setToolTip(tr("Ambiente seguro com proteÃ§Ã£o SSL"));
 
 	LoginDialog->setStyleSheet("QDialog { background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #77a0b8, stop: 1 #fefdfe); }");
 
@@ -762,7 +762,7 @@ void VizTrader::createLoginDialog()
 	forgotPasswordLabel->setOpenExternalLinks(true);
 	forgotPasswordLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
 
-	QPushButton* certificateErrorButton = new QPushButton(tr("Informações do Certificado..."));
+	QPushButton* certificateErrorButton = new QPushButton(tr("InformaÃ§Ãµes do Certificado..."));
 	connect(certificateErrorButton, SIGNAL(clicked()), this, SLOT(certificateInfo()));
 	LoginDialogButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 	connect(LoginDialogButtonBox, SIGNAL(accepted()), LoginDialog, SLOT(accept()));
@@ -771,7 +771,7 @@ void VizTrader::createLoginDialog()
 	layoutMain->addWidget(LoginDialogImageLabel);
 	layoutMain->addLayout(layout);
 	layout->addLayout(formLayout);
-	formLayout->addRow(tr("&Usuário:"), LoginDialogNameLineEdit);
+	formLayout->addRow(tr("&UsuÃ¡rio:"), LoginDialogNameLineEdit);
 	formLayout->addRow(tr("&Senha:"), LoginDialogPasswordLineEdit);
 	formLayout->addRow("", LoginDialogSaveAccountInThisComputerCheckBox);
 	formLayout->addRow("", LoginDialogAutoConnectCheckBox);
@@ -845,42 +845,42 @@ void VizTrader::vizServerError(VizCTP::VizTPError vetperror)
 	{
 		case VizCTP::DIFFERENT_PROTOCOL_VERSION_ERROR:
 		{
-			Message = tr("\nFalha na comunicação:\n\nVersão do protocolo de comunicação desatualizada.\n");
+			Message = tr("\nFalha na comunicaÃ§Ã£o:\n\nVersÃ£o do protocolo de comunicaÃ§Ã£o desatualizada.\n");
 			break;
 		}
 		case VizCTP::AUTHENTICATION_ERROR:
 		{
-			Message = tr("\nFalha na autenticação:\n\nO nome de usuário e senha digitados são incorretos.\n");
+			Message = tr("\nFalha na autenticaÃ§Ã£o:\n\nO nome de usuÃ¡rio e senha digitados sÃ£o incorretos.\n");
 			break;
 		}
 		case VizCTP::ACCOUNT_EXPIRED_ERROR:
 		{
-			Message = tr("\nFalha na autenticação:\n\nSua conta expirou.\n");
+			Message = tr("\nFalha na autenticaÃ§Ã£o:\n\nSua conta expirou.\n");
 			break;
 		}
 		case VizCTP::CERTIFICATE_INVALID_ERROR:
 		{
-			Message = tr("\nFalha na autenticação:\n\nCertificado de segurança inválido.\n");
+			Message = tr("\nFalha na autenticaÃ§Ã£o:\n\nCertificado de seguranÃ§a invÃ¡lido.\n");
 			break;
 		}
 		case VizCTP::AUTHENTICATION_WITHOUT_ENCRYPTION_ERROR:
 		{
-			Message = tr("\nFalha na autenticação:\n\nSem conexão.\n");
+			Message = tr("\nFalha na autenticaÃ§Ã£o:\n\nSem conexÃ£o.\n");
 			break;
 		}
 		case VizCTP::CONNECTION_REFUSED_ERROR:
 		{
-			Message = tr("\nFalha na conexão:\n\nA Conexão foi recusada pelo servidor (ou tempo limite esgotado).\n");
+			Message = tr("\nFalha na conexÃ£o:\n\nA ConexÃ£o foi recusada pelo servidor (ou tempo limite esgotado).\n");
 			break;
 		}
 		case VizCTP::HOST_NOT_FOUND_ERROR:
 		{
-			Message = tr("\nFalha na conexão:\n\nO servidor não foi encontrado.\n");
+			Message = tr("\nFalha na conexÃ£o:\n\nO servidor nÃ£o foi encontrado.\n");
 			break;
 		}
 		case VizCTP::SOCKET_TIMEOUT_ERROR:
 		{
-			Message = tr("\nFalha na operação:\n\nTempo esgotado.\n");
+			Message = tr("\nFalha na operaÃ§Ã£o:\n\nTempo esgotado.\n");
 			break;
 		}
 		case VizCTP::NETWORK_ERROR:
@@ -890,32 +890,32 @@ void VizTrader::vizServerError(VizCTP::VizTPError vetperror)
 		}
 		case VizCTP::SSL_HANDSHAKE_ERROR:
 		{
-			Message = tr("\nFalha na autenticação:\n\nOcorreu um erro na operação Handshake do protocolo SSL.\n");
+			Message = tr("\nFalha na autenticaÃ§Ã£o:\n\nOcorreu um erro na operaÃ§Ã£o Handshake do protocolo SSL.\n");
 			break;
 		}
 		case VizCTP::PROXY_AUTHENTICATION_REQUIRED_ERROR:
 		{
-			Message = tr("\nFalha no proxy:\n\nO proxy usado requer autenticação.\n");
+			Message = tr("\nFalha no proxy:\n\nO proxy usado requer autenticaÃ§Ã£o.\n");
 			break;
 		}
 		case VizCTP::PROXY_CONNECTION_REFUSED_ERROR:
 		{
-			Message = tr("\nFalha no proxy:\n\nNão foi possível contactar o servidor proxy porque a conexão com o servidor que foi negado.\n");
+			Message = tr("\nFalha no proxy:\n\nNÃ£o foi possÃ­vel contactar o servidor proxy porque a conexÃ£o com o servidor que foi negado.\n");
 			break;
 		}
 		case VizCTP::PROXY_CONNECTION_CLOSED_ERROR:
 		{
-			Message = tr("\nFalha no proxy:\n\nA conexão com o servidor proxy foi fechada inesperadamente.\n");
+			Message = tr("\nFalha no proxy:\n\nA conexÃ£o com o servidor proxy foi fechada inesperadamente.\n");
 			break;
 		}
 		case VizCTP::PROXY_CONNECTION_TIMEOUT_ERROR:
 		{
-			Message = tr("\nFalha no proxy:\n\nO tempo limite da conexão com o servidor proxy esgotadou ou o servidor proxy parou de responder na fase de autenticação.\n");
+			Message = tr("\nFalha no proxy:\n\nO tempo limite da conexÃ£o com o servidor proxy esgotadou ou o servidor proxy parou de responder na fase de autenticaÃ§Ã£o.\n");
 			break;
 		}
 		case VizCTP::PROXY_NOT_FOUND_ERROR:
 		{
-			Message = tr("\nFalha no proxy:\n\nO endereço proxy configurado na aplicação não foi encontrado.\n");
+			Message = tr("\nFalha no proxy:\n\nO endereÃ§o proxy configurado na aplicaÃ§Ã£o nÃ£o foi encontrado.\n");
 			break;
 		}
 		case VizCTP::PROXY_PROTOCOL_ERROR:
@@ -925,13 +925,13 @@ void VizTrader::vizServerError(VizCTP::VizTPError vetperror)
 		}
 		case VizCTP::SOCKET_ERROR:
 		{
-			Message = tr("\nFalha na comunicação:\n\nErro no protocolo de rede.\n");
+			Message = tr("\nFalha na comunicaÃ§Ã£o:\n\nErro no protocolo de rede.\n");
 			break;
 		}
 		case VizCTP::UNKNOWN_ERROR:
 		default:
 		{
-			Message = tr("\nFalha na comunicação:\n\nErro não identificado.\n");
+			Message = tr("\nFalha na comunicaÃ§Ã£o:\n\nErro nÃ£o identificado.\n");
 			break;
 		}
 	};
@@ -942,7 +942,7 @@ void VizTrader::vizServerError(VizCTP::VizTPError vetperror)
 		changeClientStatus();
 	}
 
-	QMessageBox msgBox(QMessageBox::Warning, tr("Erro na comunicação com o servidor."), Message, 0, this);
+	QMessageBox msgBox(QMessageBox::Warning, tr("Erro na comunicaÃ§Ã£o com o servidor."), Message, 0, this);
 	msgBox.exec();
 }
 //-----------------------------------------------------------------------------
@@ -1138,8 +1138,8 @@ void VizTrader::createActions()
 	LogoutAct->setStatusTip(tr("Desconecta do servidor"));
 	connect(LogoutAct, SIGNAL(triggered()), this, SLOT(logout()));
 
-	/*CertificateInfoAct = new QAction(QIcon(":/VizTrader/Resources/certificateKey.png"), tr("&Informação de Segurança"), this);
-	CertificateInfoAct->setStatusTip(tr("Mostra Informações sobre o Certificado de Segurança"));
+	/*CertificateInfoAct = new QAction(QIcon(":/VizTrader/Resources/certificateKey.png"), tr("&InformaÃ§Ã£o de SeguranÃ§a"), this);
+	CertificateInfoAct->setStatusTip(tr("Mostra InformaÃ§Ãµes sobre o Certificado de SeguranÃ§a"));
 	connect(CertificateInfoAct, SIGNAL(triggered()), this, SLOT(certificateInfo()));
 	*/
 	
@@ -1189,9 +1189,9 @@ void VizTrader::createActions()
 	AutoAjustWindowAct->setChecked(true);
 	connect(AutoAjustWindowAct, SIGNAL(triggered()), this, SLOT(autoAjustWindow()));
 
-	NextAct = new QAction(tr("Pró&xima"), this);
+	NextAct = new QAction(tr("PrÃ³&xima"), this);
 	NextAct->setShortcuts(QKeySequence::NextChild);
-	NextAct->setStatusTip(tr("Seleciona a próxima janela"));
+	NextAct->setStatusTip(tr("Seleciona a prÃ³xima janela"));
 	connect(NextAct, SIGNAL(triggered()), this, SLOT(activateNextSubWindow()));
 
 	PreviousAct = new QAction(tr("&Anterior"), this);
@@ -1200,16 +1200,16 @@ void VizTrader::createActions()
 	connect(PreviousAct, SIGNAL(triggered()), this, SLOT(activatePreviousSubWindow()));
 
 	WorkAreaManageAct = new QAction(QIcon(":/VizTrader/Resources/desktop-32.png"), tr("&Gerenciar"), this);
-	WorkAreaManageAct->setStatusTip(tr("Gerencia as múltiplas área de trabalho"));
+	WorkAreaManageAct->setStatusTip(tr("Gerencia as mÃºltiplas Ã¡rea de trabalho"));
 	connect(WorkAreaManageAct, SIGNAL(triggered()), this, SLOT(workAreaManagement()));
 
 	
-	WorkAreaNextAct = new QAction(QIcon(":/VizTrader/Resources/go-next.png"), tr("Pró&xima"), this);
-	WorkAreaNextAct->setStatusTip(tr("Seleciona a próxima área de trabalho"));
+	WorkAreaNextAct = new QAction(QIcon(":/VizTrader/Resources/go-next.png"), tr("PrÃ³&xima"), this);
+	WorkAreaNextAct->setStatusTip(tr("Seleciona a prÃ³xima Ã¡rea de trabalho"));
 	connect(WorkAreaNextAct, SIGNAL(triggered()), this, SLOT(workAreaNext()));
 
 	WorkAreaPreviousAct = new QAction(QIcon(":/VizTrader/Resources/go-previous.png"), tr("&Anterior"), this);
-	WorkAreaPreviousAct->setStatusTip(tr("Seleciona a área de trabalho anterior"));
+	WorkAreaPreviousAct->setStatusTip(tr("Seleciona a Ã¡rea de trabalho anterior"));
 	connect(WorkAreaPreviousAct, SIGNAL(triggered()), this, SLOT(workAreaPrev()));
 
 
@@ -1220,26 +1220,26 @@ void VizTrader::createActions()
 	AboutAct->setStatusTip(tr("Sobre o %1").arg(ApplicationData->appicationName()));
 	connect(AboutAct, SIGNAL(triggered()), this, SLOT(about()));
 
-	ShowHideStatusBarAct = new QAction(tr("&Barra de status visível"), this);
+	ShowHideStatusBarAct = new QAction(tr("&Barra de status visÃ­vel"), this);
 	ShowHideStatusBarAct->setStatusTip(tr("Alterna visibilidade da barra de status"));
 	ShowHideStatusBarAct->setCheckable(true);
 	ShowHideStatusBarAct->setChecked(true);
 	connect(ShowHideStatusBarAct, SIGNAL(triggered()), this, SLOT(showHideStatusBar()));
 
 
-	FullScreenAct = new QAction(tr("Visualização em &tela cheia"), this);
-	FullScreenAct->setStatusTip(tr("Visualização em tela cheia"));
+	FullScreenAct = new QAction(tr("VisualizaÃ§Ã£o em &tela cheia"), this);
+	FullScreenAct->setStatusTip(tr("VisualizaÃ§Ã£o em tela cheia"));
 	FullScreenAct->setCheckable(true);
 	connect(FullScreenAct, SIGNAL(triggered()), this, SLOT(fullScreen()));
 
-	FullDesktopAct = new QAction(tr("Visualização em todo &desktop"), this);
-	FullDesktopAct->setStatusTip(tr("Visualização em todo desktop"));
+	FullDesktopAct = new QAction(tr("VisualizaÃ§Ã£o em todo &desktop"), this);
+	FullDesktopAct->setStatusTip(tr("VisualizaÃ§Ã£o em todo desktop"));
 	FullDesktopAct->setCheckable(true);
 	connect(FullDesktopAct, SIGNAL(triggered()), this, SLOT(fullDesktop()));
 
 	
-	ShowHideDataWindowAct = new QAction(tr("Visualização de dados"), this);
-	ShowHideDataWindowAct->setStatusTip(tr("Alterna a visibilidade da ferramenta de visualização de dados"));
+	ShowHideDataWindowAct = new QAction(tr("VisualizaÃ§Ã£o de dados"), this);
+	ShowHideDataWindowAct->setStatusTip(tr("Alterna a visibilidade da ferramenta de visualizaÃ§Ã£o de dados"));
 	ShowHideDataWindowAct->setCheckable(true);
 	connect(ShowHideDataWindowAct, SIGNAL(triggered()), this, SLOT(showHideDataWindow()));
 
@@ -1252,8 +1252,8 @@ void VizTrader::createActions()
 
 	//tools
 
-	SelectionToolAct = new QAction(QIcon(":/VizTrader/Resources/SelectionTool.png"), tr("Ferramenta de &Seleção"), this);
-	SelectionToolAct->setStatusTip(tr("Ferramenta de Seleção"));
+	SelectionToolAct = new QAction(QIcon(":/VizTrader/Resources/SelectionTool.png"), tr("Ferramenta de &SeleÃ§Ã£o"), this);
+	SelectionToolAct->setStatusTip(tr("Ferramenta de SeleÃ§Ã£o"));
 	SelectionToolAct->setCheckable(true);
 	connect(SelectionToolAct, SIGNAL(triggered()), this, SLOT(selectionTool()));
 
@@ -1267,8 +1267,8 @@ void VizTrader::createActions()
 	ZoomBoxAct->setCheckable(true);
 	connect(ZoomBoxAct, SIGNAL(triggered()), this, SLOT(zoomBoxTool()));
 
-	PanAct = new QAction(QIcon(":/VizTrader/Resources/Pan.png"), tr("Mão"), this);
-	PanAct->setStatusTip(tr("Ferramenta mão"));
+	PanAct = new QAction(QIcon(":/VizTrader/Resources/Pan.png"), tr("MÃ£o"), this);
+	PanAct->setStatusTip(tr("Ferramenta mÃ£o"));
 	PanAct->setCheckable(true);
 	connect(PanAct, SIGNAL(triggered()), this, SLOT(panTool()));
 
@@ -1338,8 +1338,8 @@ void VizTrader::createActions()
 	connect(Clipboard, SIGNAL(dataChanged()), this, SLOT(clipboardDataChanged()));
 
 
-	ShowSettingsDialogAct = new QAction(tr("Preferências"), this);
-	ShowSettingsDialogAct->setStatusTip(tr("Ajusta preferências da aplicação"));
+	ShowSettingsDialogAct = new QAction(tr("PreferÃªncias"), this);
+	ShowSettingsDialogAct->setStatusTip(tr("Ajusta preferÃªncias da aplicaÃ§Ã£o"));
 	connect(ShowSettingsDialogAct, SIGNAL(triggered()), ApplicationSettings, SLOT(loadAndShow()));
 	
 }
@@ -1371,7 +1371,7 @@ void VizTrader::updateEditMenu()
 void VizTrader::createMenus()
 {
 	/*
-	WorkAreaMenu = menuBar()->addMenu(tr("Área de &Trabalho"));
+	WorkAreaMenu = menuBar()->addMenu(tr("Ãrea de &Trabalho"));
 	WorkAreaMenu->addAction(WorkAreaManageAct);
 	WorkAreaMenu->addAction(WorkAreaPreviousAct);
 	WorkAreaMenu->addAction(WorkAreaNextAct);
@@ -1382,7 +1382,7 @@ void VizTrader::createMenus()
 	FileMenu->addAction(LogoutAct);
 	FileMenu->addSeparator();
 
-	WorkAreaMenu = FileMenu->addMenu(tr("Área de &Trabalho"));
+	WorkAreaMenu = FileMenu->addMenu(tr("Ãrea de &Trabalho"));
 	WorkAreaMenu->addAction(WorkAreaManageAct);
 	WorkAreaMenu->addAction(WorkAreaPreviousAct);
 	WorkAreaMenu->addAction(WorkAreaNextAct);
@@ -1432,18 +1432,18 @@ void VizTrader::createMenus()
 //-----------------------------------------------------------------------------
 void VizTrader::createToolBars()
 {
-	WorkAreaToolBar = addToolBar(tr("Área de trabalho"));
+	WorkAreaToolBar = addToolBar(tr("Ãrea de trabalho"));
 	WorkAreaToolBar->setObjectName("WorkAreaToolBar");
 	WorkAreaToolBar->addAction(WorkAreaManageAct);
 	WorkAreaToolBar->addAction(WorkAreaPreviousAct);
 	WorkAreaToolBar->addAction(WorkAreaNextAct);
 	
-	LoginToolBar = addToolBar(tr("Conexão"));
+	LoginToolBar = addToolBar(tr("ConexÃ£o"));
 	LoginToolBar->setObjectName("LoginToolBar");
 	LoginToolBar->addAction(LoginAct);
 	LoginToolBar->addAction(LogoutAct);
 
-	StandardToolBar = addToolBar(tr("Padrão"));
+	StandardToolBar = addToolBar(tr("PadrÃ£o"));
 	StandardToolBar->setObjectName("StandardToolBar");
 	//StandardToolBar->addAction(LoginAct);
 	//StandardToolBar->addAction(LogoutAct);
@@ -1469,10 +1469,10 @@ void VizTrader::createToolBars()
 
 
 	//StandardToolBar->addWidget(OpenSecurityWidget->completerLineEdit());
-	//StandardToolBar->setStatusTip(tr("Alterna visibilidade da barra de ferramentas padrão"));
-	//StandardToolBar->setToolTip(tr("Alterna visibilidade da barra de ferramentas padrão"));
+	//StandardToolBar->setStatusTip(tr("Alterna visibilidade da barra de ferramentas padrÃ£o"));
+	//StandardToolBar->setToolTip(tr("Alterna visibilidade da barra de ferramentas padrÃ£o"));
 
-	NavigationToolBar = new QToolBar(tr("Navegação"));
+	NavigationToolBar = new QToolBar(tr("NavegaÃ§Ã£o"));
 	NavigationToolBar->setObjectName("NavigationToolBar");
 	addToolBar(Qt::LeftToolBarArea, NavigationToolBar);
 	NavigationToolBar->addAction(SelectionToolAct);
@@ -1545,7 +1545,7 @@ void VizTrader::createStatusBar()
 	WorkAreaComboBox = new QComboBox;
 	connect(WorkAreaComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(workAreaChange(int)));
 	
-	//statusBar()->addPermanentWidget(new QLabel(tr("Área de Trabalho:")));
+	//statusBar()->addPermanentWidget(new QLabel(tr("Ãrea de Trabalho:")));
 	statusBar()->addPermanentWidget(WorkAreaComboBox);
 	statusBar()->addPermanentWidget(ClientStatus);
 	
@@ -1568,7 +1568,7 @@ void VizTrader::createDocks()
 	DataInspectorDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 	addDockWidget(Qt::RightDockWidgetArea, DataInspectorDock);
 
-	UndoViewDock = new QDockWidget(tr("Histórico"), this);
+	UndoViewDock = new QDockWidget(tr("HistÃ³rico"), this);
 	UndoViewDock->setObjectName("UndoViewDock");
 	UndoViewDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 	addDockWidget(Qt::RightDockWidgetArea, UndoViewDock);

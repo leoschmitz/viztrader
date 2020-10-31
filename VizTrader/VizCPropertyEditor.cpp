@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCPropertyEditor.h"
@@ -89,7 +89,7 @@ VizCPropertyEditor::VizCPropertyEditor() : VariantManager(0), VariantFactory(0),
 	ToolButton = new QToolButton(this);
 	ToolButton->setAutoRaise(true);
 	ToolButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	ToolButton->setText(tr("Opções"));
+	ToolButton->setText(tr("OpÃ§Ãµes"));
 	
 
 	QVBoxLayout* layoutGeral = new QVBoxLayout;
@@ -133,8 +133,8 @@ void VizCPropertyEditor::slotResetToDefaultAction()
 //-----------------------------------------------------------------------------
 void VizCPropertyEditor::createMenu()
 {
-	ResetToDefaultAction = new QAction(tr("&Valores Padrão"), this);
-	ResetToDefaultAction->setStatusTip(tr("Restaura os valores padrão para este ítem"));
+	ResetToDefaultAction = new QAction(tr("&Valores PadrÃ£o"), this);
+	ResetToDefaultAction->setStatusTip(tr("Restaura os valores padrÃ£o para este Ã­tem"));
 
 	connect(ResetToDefaultAction, SIGNAL(triggered()), this, SLOT(slotResetToDefaultAction()));
 	
@@ -409,7 +409,7 @@ QtVariantProperty* VizCPropertyEditor::createProperty(const QString& name, const
 	{
 		p = VariantManager->addProperty(QtVariantPropertyManager::enumTypeId(), aliasName);
 		QStringList types;
-		types << tr("Abertura")<< tr("Fechamento")<< tr("Máximo")<< tr("Mínimo");
+		types << tr("Abertura")<< tr("Fechamento")<< tr("MÃ¡ximo")<< tr("MÃ­nimo");
 		p->setAttribute("enumNames", types);
 		s32 pw = value.value<s32>();
 		p->setValue(pw);
@@ -459,7 +459,7 @@ QtVariantProperty* VizCPropertyEditor::createProperty(const QString& name, const
 	{
 		p = VariantManager->addProperty(QtVariantPropertyManager::enumTypeId(), aliasName);
 		QStringList types;
-		types << tr("Diário")<< tr("Semanal")<< tr("Mensal")<< tr("Trimestral")<< tr("Anual");
+		types << tr("DiÃ¡rio")<< tr("Semanal")<< tr("Mensal")<< tr("Trimestral")<< tr("Anual");
 		QtIconMap enumIcons;
 		enumIcons[0] = QIcon(":/VizTrader/Resources/PeriodicityDaily.png");
 		enumIcons[1] = QIcon(":/VizTrader/Resources/PeriodicityWeekly.png");
@@ -486,7 +486,7 @@ QtVariantProperty* VizCPropertyEditor::createProperty(const QString& name, const
 	{
 		p = VariantManager->addProperty(QtVariantPropertyManager::enumTypeId(), aliasName);
 		QStringList types;
-		types << tr("Invisível")<< tr("Linha Sólida")<< tr("Traços")<< tr("Pontos")<< tr("Traço/Ponto")<< tr("Traço/Ponto/Ponto");
+		types << tr("InvisÃ­vel")<< tr("Linha SÃ³lida")<< tr("TraÃ§os")<< tr("Pontos")<< tr("TraÃ§o/Ponto")<< tr("TraÃ§o/Ponto/Ponto");
 		p->setAttribute("enumNames", types);
 		p->setValue(value);
 	}

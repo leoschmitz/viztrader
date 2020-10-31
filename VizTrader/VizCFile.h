@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2010 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2010 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #ifndef __VIZCFILEH__
@@ -23,10 +23,10 @@ namespace viz
 namespace io
 {
 //-----------------------------------------------------------------------------
-// Essa classe lida com 3 extensões de arquivo
-//  1) vzc - vizcompany: contém informação meta da companhia
-//	2) vzh - vizhistory: contém informação histórica do ativo
-//	3) vzr - vizrealtime: contém informação intraday do ativo
+// Essa classe lida com 3 extensÃµes de arquivo
+//  1) vzc - vizcompany: contÃ©m informaÃ§Ã£o meta da companhia
+//	2) vzh - vizhistory: contÃ©m informaÃ§Ã£o histÃ³rica do ativo
+//	3) vzr - vizrealtime: contÃ©m informaÃ§Ã£o intraday do ativo
 //
 // VZC
 // ---

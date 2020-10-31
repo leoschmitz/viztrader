@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCBollingerLowerBandIndicator.h"
@@ -54,7 +54,7 @@ void VizCBollingerLowerBandIndicator::resetToDefaults()
 
 	gui::vizObjectGetAllPropertiesNamesAndValues(this, names, newValues);
 
-	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores Padrão"));
+	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores PadrÃ£o"));
 	emit itemChanged(true);
 }
 //-----------------------------------------------------------------------------
@@ -230,12 +230,12 @@ QString VizCBollingerLowerBandIndicator::toolTip(const QPointF& p) const
 		}
 		case viz::VEPF_MAX_PRICE:
 		{
-			priceField = tr("Máximo");
+			priceField = tr("MÃ¡ximo");
 			break;
 		}
 		case viz::VEPF_MIN_PRICE:
 		{
-			priceField = ("Mínimo");
+			priceField = ("MÃ­nimo");
 			break;
 		}
 	};

@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #ifndef __VIZTYPES_H__
@@ -299,7 +299,7 @@ static inline QDataStream& operator>>(QDataStream& in, VizETPServerPacket& v)
 enum VizETPClientPacket
 {
 	VETPCP_INVALID = -1,	
-	// autenticação
+	// autenticaÃ§Ã£o
 	VETPCP_SSL_AUTHENTICATION_OK = 1,
 	VETPCP_SSL_ERROR_AUTHENTICATION = 2,
 	VETPCP_SSL_SESSIONID = 3,
@@ -307,7 +307,7 @@ enum VizETPClientPacket
 	VETPCP_SSL_ERROR_UNENCRYPTED_SESSIONID = 5,
 	VETPCP_SSL_READY_FOR_SESSIONID = 6,
 	VETPCP_SSL_PROTOCOL_VERSION = 7,
-	// dados históricos
+	// dados histÃ³ricos
 	VETPCP_TCP_FULL_HISTO = 100,
 	VETPCP_TCP_CURRENTLY_UNAVAILABLE_HISTO = 101,	
 	VETPCP_TCP_PARTIAL_HISTO = 102,

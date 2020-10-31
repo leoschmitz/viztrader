@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCWorkAreaManagerWidget.h"
@@ -46,7 +46,7 @@ VizCWorkAreaManagerWidget::VizCWorkAreaManagerWidget() : QDialog(0), WorkAreaMan
 	setWindowFlags(Qt::Dialog | Qt::WindowCloseButtonHint);
 	setMinimumSize(QSize(600, 300));
 	setModal(true);
-	setWindowTitle(tr("Gerenciar Múltiplas Área de Trabalho"));	
+	setWindowTitle(tr("Gerenciar MÃºltiplas Ãrea de Trabalho"));	
 
 	NewWorkAreaButton = new QToolButton(this);
 	NewWorkAreaButton->setAutoRaise(true);
@@ -190,7 +190,7 @@ void VizCWorkAreaManagerWidget::removeWorkArea()
 		if(ListWidget->count() > 1)
 		{
 			QMessageBox::StandardButton reply;
-			reply = QMessageBox::question(this, system::VizCApplicationData::instance()->appicationName(), "Remover área de trabalho?", QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+			reply = QMessageBox::question(this, system::VizCApplicationData::instance()->appicationName(), "Remover Ã¡rea de trabalho?", QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
 			if(reply == QMessageBox::Yes)
 			{
 				WorkAreaManager->removeWorkArea(item->Index);

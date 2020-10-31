@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCSceneInspector.h"
@@ -44,7 +44,7 @@ VizCSceneInspector::VizCSceneInspector() : QTreeWidget(), GraphicsPanel(0)
 	setEditTriggers(NoEditTriggers);
 
 	QStringList headers;
-	headers << QObject::tr("Ítens") << QObject::tr("Visível");
+	headers << QObject::tr("Ãtens") << QObject::tr("VisÃ­vel");
 	setHeaderLabels(headers);
 
 	setRootIsDecorated(true);

@@ -12,7 +12,7 @@ namespace viz
 namespace net
 {
 //-----------------------------------------------------------------------------
-// Quaisquer mudanças nessas portas devem ser reescritas também no servidor
+// Quaisquer mudanÄ“as nessas portas devem ser reescritas tambÃ©m no servidor
 const int SslListeningPort = 12000;	
 const int TcpListeningPort = 12001;
 const QString VizTPProtocolVersion = "0.0.3";
@@ -720,7 +720,7 @@ void VizCTP::sslErrors(const QList<QSslError> &errors)
  	return;
 #endif
 
-	// Nosso certificado é self signed, pois não pagamos a nenhuma CA
+	// Nosso certificado Ã© self signed, pois nÄ‡o pagamos a nenhuma CA
 	if (errors.size() == 1)
 		if (errors.at(0).error() == QSslError::SelfSignedCertificate)
 		{

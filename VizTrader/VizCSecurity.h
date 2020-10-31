@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2010 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2010 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #ifndef __VIZCSECURITY_H__

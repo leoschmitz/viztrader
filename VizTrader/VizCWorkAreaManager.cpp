@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica SoluÁıes em VisualizaÁ„o LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica Solu√ß√µes em Visualiza√ß√£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCWorkAreaManager.h"
@@ -39,7 +39,7 @@ QString VizCWorkAreaManager::generateName()
 	do
 	{
 		Count++;
-		title = QObject::tr("¡rea de Trabalho %1").arg(Count);
+		title = QObject::tr("√Årea de Trabalho %1").arg(Count);
 		ok = true;
 		if(containsWorkArea(title))
 		{

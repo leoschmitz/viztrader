@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2010 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2010 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCVerticalScale.h"
@@ -676,7 +676,7 @@ void VizCVerticalScale::drawRuler()
 		painter.drawRect(bound);
 		
 		painter.save();	
-		// Esse 2 é do bounding box
+		// Esse 2 Ã© do bounding box
 		painter.translate(0, bound.y() - 2);		
 		td.drawContents(&painter);
 		painter.restore();	
@@ -973,7 +973,7 @@ void VizCVerticalScale::fillSemiLogValues()
 }
 //-----------------------------------------------------------------------------
 // Essa rotina calcula os valores que encontrados na regua vertical.
-// Os valores são incluidos na lista RulerValues
+// Os valores sÃ£o incluidos na lista RulerValues
 void VizCVerticalScale::fillRulerValues()
 {
 	Precision.clear();

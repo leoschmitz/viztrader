@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCBarsChart.h"
@@ -154,7 +154,7 @@ void VizCBarsChart::paint(QPainter* painter)
 	shadowPen.setCosmetic(true);
 
 
-	//LOD - to reduce the Moiré pattern
+	//LOD - to reduce the MoirÃ© pattern
 	s32 pointsCount = LinesDownLod.size() + LinesUpLod.size();
 	s32 w = painter->viewport().width();
 	bool lod = (w < pointsCount * 0.8) ? true : false;

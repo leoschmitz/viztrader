@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizIIndicator.h"
@@ -238,7 +238,7 @@ void VizIIndicator::paintHistogram(QPainter* painter)
 	shadowPen.setCosmetic(true);
 	
 	
-	//LOD - to reduce the Moiré pattern
+	//LOD - to reduce the MoirÃ© pattern
 	s32 pointsCount = Points.size();
 	s32 w = painter->viewport().width();
 	bool lod = (w < pointsCount * 1.5) ? true : false;

@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #ifndef __VIZCSEARCHENGINE_H__
@@ -23,7 +23,7 @@ public:
 	VizCSearchEngine(QObject* parent = 0);
 	~VizCSearchEngine();
 
-	// Mandar a prioridade através da posição dentro da lista, o default é crescente
+	// Mandar a prioridade atravÃ©s da posiÃ§Ã£o dentro da lista, o default Ã© crescente
 	// Exemplo 1: list (3,2,1,0) vai dar prioridade inversa as colunas
 	// Exemplo 2: list (1, 2, 0) vai dar prioridade ao elemento 1, depois ao 1, e depois ao 0
 	void setLastSearchableColumn(int last);

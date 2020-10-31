@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCApplicationData.h"
@@ -35,9 +35,9 @@ VizCApplicationData::VizCApplicationData()
 
 	AppicationName = QObject::tr("VizTrader");
 	ApplicationVersion = VizSVersionNumber(1, 0, 0, 14, VESC_DEVELOPMENT_STAGE);
-	OrganizationName = QObject::tr("Visualítica");
+	OrganizationName = QObject::tr("VisualÃ­tica");
 	OrganizationDomain = QObject::tr("visualitica.com");
-	CopyrightStatement = QObject::tr("(C) 2008-2009 Copyright Visualítica Soluções em Visualização LTDA. Todos direitos reservados.");
+	CopyrightStatement = QObject::tr("(C) 2008-2009 Copyright VisualÃ­tica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. Todos direitos reservados.");
 	LicenseText = licenseString;
 	BugReportEmailAddress = QObject::tr("viztraderbugs@visualitica.com");
 	HomepageAddress = QObject::tr("http://visualitica.com/viztrader");

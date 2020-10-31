@@ -146,11 +146,11 @@ private:
 	~VizCTP();
 
 signals:	
-	// Esses sinais s„o do protocolo e n„o dos sockets
+	// Esses sinais s√£o do protocolo e n√£o dos sockets
 	void connected();
 	void disconnected();
 	void stateChanged(VizTPState currentState);
-	// n„o È exatamente por cento mas por unidade, j· que vai de 0 a 1
+	// n√£o √© exatamente por cento mas por unidade, j√° que vai de 0 a 1
 	void percentageReady(VizETPClientPacket packetType, f32 perUnit);
 
 	void securityUnavailable(QString symbol);

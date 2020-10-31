@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2010 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2010 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCSecuritySearchModel.h"
@@ -59,7 +59,7 @@ bool VizCSecuritySearchModel::saveSecurityList()
 	// ==================
 	// (QString) VizList
 	// (QString) Version
-	// (QDate) Ultima Atualização
+	// (QDate) Ultima AtualizaÃ§Ã£o
 	// (QString) SimboloCompleto
 	// (QString) NomeCompleto
 	// (QString) Peridiocidade
@@ -183,7 +183,7 @@ QVariant VizCSecuritySearchModel::headerData(int section ,
 	switch (section) 
 	{
 	case 0:
-		return QString(tr("Símbolo"));
+		return QString(tr("SÃ­mbolo"));
 		break;
 	case 1:
 		return QString(tr("Nome"));

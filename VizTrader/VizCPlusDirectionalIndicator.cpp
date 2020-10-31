@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCPlusDirectionalIndicator.h"
@@ -46,7 +46,7 @@ void VizCPlusDirectionalIndicator::resetToDefaults()
 
 	gui::vizObjectGetAllPropertiesNamesAndValues(this, names, newValues);
 
-	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores Padrão"));
+	emit createUndoCommandPropertiesChanged(this, names, oldValues, newValues, true, tr("Valores PadrÃ£o"));
 	emit itemChanged(true);
 }
 //-----------------------------------------------------------------------------

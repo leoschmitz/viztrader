@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2010 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2010 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCDataFacade.h"
@@ -80,7 +80,7 @@ bool VizCDataFacade::updateDailyAvailable(const QDate& lastDate)
 //-----------------------------------------------------------------------------
 void VizCDataFacade::updateSecurity(core::VizCSecurity& sec)
 {
-	// Aqui entra a sincronização
+	// Aqui entra a sincronizaÃ§Ã£o
 	if (InterfaceToServer->onlineAndAuthenticate())
 	{
 		const QDate& lastDate = sec.SecurityPeriods.at(sec.SecurityPeriods.size() - 1).ExchangeDate;

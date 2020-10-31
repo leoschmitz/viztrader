@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica Soluções em Visualização LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica SoluÃ§Ãµes em VisualizaÃ§Ã£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCMdiSubWindow.h"
@@ -79,23 +79,23 @@ VizCMdiSubWindow::VizCMdiSubWindow(VizCWorkArea* workArea) : QMdiSubWindow(), Wo
 
 	AddMenu = new QMenu(NewTabButton);
 
-	MenuAddChart = AddMenu->addMenu(tr("Gráfico"));
-		AddPrimaryChart = MenuAddChart->addAction(tr("Primário"));
-		MenuAddSecondaryChart = MenuAddChart->addMenu(tr("Secundário"));
+	MenuAddChart = AddMenu->addMenu(tr("GrÃ¡fico"));
+		AddPrimaryChart = MenuAddChart->addAction(tr("PrimÃ¡rio"));
+		MenuAddSecondaryChart = MenuAddChart->addMenu(tr("SecundÃ¡rio"));
 			AddSecundaryChartInNewPanel = MenuAddSecondaryChart->addAction(tr("Em Novo Painel"));
 			AddSecundaryChartInSelectedPanel = MenuAddSecondaryChart->addAction(tr("No Painel Atual"));
-			AddSecundaryChartInPrimaryPanel = MenuAddSecondaryChart->addAction(tr("No Painel do Gráfico Primário"));
+			AddSecundaryChartInPrimaryPanel = MenuAddSecondaryChart->addAction(tr("No Painel do GrÃ¡fico PrimÃ¡rio"));
 	
 	MenuAddIndicator = AddMenu->addMenu(tr("Indicador"));
-		MenuAddIndicatorPrimaryChart = MenuAddIndicator->addMenu(tr("Base Gráfico Primário"));
+		MenuAddIndicatorPrimaryChart = MenuAddIndicator->addMenu(tr("Base GrÃ¡fico PrimÃ¡rio"));
 			AddIndicatorBasedOnPrimaryChartInNewPanel = MenuAddIndicatorPrimaryChart->addAction(tr("Em Novo Painel"));
 			AddIndicatorBasedOnPrimaryChartInSelectedPanel = MenuAddIndicatorPrimaryChart->addAction(tr("No Painel Atual"));
-			AddIndicatorBasedOnPrimaryChartInPrimaryPanel = MenuAddIndicatorPrimaryChart->addAction(tr("No Painel do Gráfico Primário"));
+			AddIndicatorBasedOnPrimaryChartInPrimaryPanel = MenuAddIndicatorPrimaryChart->addAction(tr("No Painel do GrÃ¡fico PrimÃ¡rio"));
 
-		MenuAddIndicatorSelectedChart = MenuAddIndicator->addMenu(tr("Base Gráfico Selecionado"));
+		MenuAddIndicatorSelectedChart = MenuAddIndicator->addMenu(tr("Base GrÃ¡fico Selecionado"));
 			AddIndicatorBasedOnSelectedChartInNewPanel = MenuAddIndicatorSelectedChart->addAction(tr("Em Novo Painel"));
 			AddIndicatorBasedOnSelectedChartInSelectedPanel = MenuAddIndicatorSelectedChart->addAction(tr("No Painel Atual"));
-			AddIndicatorBasedOnSelectedChartInPrimaryPanel = MenuAddIndicatorSelectedChart->addAction(tr("No Painel do Gráfico Primário"));
+			AddIndicatorBasedOnSelectedChartInPrimaryPanel = MenuAddIndicatorSelectedChart->addAction(tr("No Painel do GrÃ¡fico PrimÃ¡rio"));
 
 	MenuAddOfferBook = AddMenu->addMenu(tr("Book de Ofertas"));
 		AddSimplifiedOfferBook = MenuAddOfferBook->addAction(tr("Simplificado"));
@@ -319,7 +319,7 @@ bool VizCMdiSubWindow::loadSecurity(const QString& securitySymbol)
 	
 	if(!ok)
 	{
-		QMessageBox::critical(0, tr("Erro de Leitura"), tr("Esse ativo não existe."));
+		QMessageBox::critical(0, tr("Erro de Leitura"), tr("Esse ativo nÃ£o existe."));
 	}
 
 	return ok;

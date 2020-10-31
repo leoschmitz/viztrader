@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-// Copyright (C) 2008-2009 Visualitica SoluÁıes em VisualizaÁ„o LTDA. All rights reserved.
+// Copyright (C) 2008-2009 Visualitica Solu√ß√µes em Visualiza√ß√£o LTDA. All rights reserved.
 //
 //-----------------------------------------------------------------------------
 #include "VizCApplicationSettings.h"
@@ -201,7 +201,7 @@ void VizCApplicationSettings::createAppearanceTab()
 
 	//line style
 	QStringList linestyles;
-	linestyles << tr("InvisÌvel")<< tr("Linha SÛlida")<< tr("TraÁos")<< tr("Pontos")<< tr("TraÁo/Ponto")<< tr("TraÁo/Ponto/Ponto");
+	linestyles << tr("Invis√≠vel")<< tr("Linha S√≥lida")<< tr("Tra√ßos")<< tr("Pontos")<< tr("Tra√ßo/Ponto")<< tr("Tra√ßo/Ponto/Ponto");
 	Appearance_ComboBox_2->addItems(linestyles);
 	Appearance_ComboBox_7->addItems(linestyles);
 	Appearance_ComboBox_9->addItems(linestyles);
@@ -691,9 +691,9 @@ void VizCApplicationSettings::slotResetToDefault()
 {
 
 	QMessageBox msgBox;
-	msgBox.setWindowTitle(tr("Valores padr„o"));
-	msgBox.setText(tr("Restaurar valores padr„o para:"));
-	//msgBox.setInformativeText("Restaurar valores padr„o para todas as abas?");
+	msgBox.setWindowTitle(tr("Valores padr√£o"));
+	msgBox.setText(tr("Restaurar valores padr√£o para:"));
+	//msgBox.setInformativeText("Restaurar valores padr√£o para todas as abas?");
 
 	QPushButton* b1 = msgBox.addButton(tr("Somente esta aba"), QMessageBox::YesRole);
 	QPushButton* b2 = msgBox.addButton(tr("Todas as abas"), QMessageBox::NoRole);

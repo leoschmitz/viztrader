@@ -63,8 +63,8 @@ void VizCCompany::get(VizCCompany& other) const
 	get(other.CompanyId, other.Name, other.WholeName, other.PartialSecuritySymbol, other.CNPJ, other.IssuerCreation, other.CurrentStatus, other.InfoUpdated, other.CCVM, other.Splits, other.Securities);
 }
 //-----------------------------------------------------------------------------
-// N„o checa se os atributos s„o conflitantes.
-// A prioridade È da propria classe se houver conflito.
+// N√£o checa se os atributos s√£o conflitantes.
+// A prioridade √© da propria classe se houver conflito.
 void VizCCompany::mergeAttributes(const VizCCompany& other)
 {	
 	CompanyId = (CompanyId == -1) ? other.CompanyId : CompanyId;
